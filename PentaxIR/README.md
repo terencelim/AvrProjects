@@ -27,7 +27,7 @@ The device is controlled by use of a single button. There are a couple different
 Several years ago I was into astrophotography and I ended up building a barn door tracker, or Scotch mount, for use with my camera.  For this to work well I also needed a way to trigger my camera without touching it. My Pentax K-x uses an infrared signal as the shutter trigger for which an IR remote is normally used. For long exposures, my camera allows for an IR signal to open the shutter and another IR signal to close the shutter. My particular remote did not function very well and required me to manually press the buttons. This made consistent timing difficult and was boring. I wanted to automate this process so exposure times would be consistent and so that I could stargaze while my camera clicked away, or sit inside my warm house during a night of winter exposures.  
 
 <center>
-<img src="./images/Capture.png" width="50%" alt="Pentax IR Schematic">
+<img src="./images/Capture.png" width="85%" alt="Pentax IR Schematic">
 </center>
 I designed a small circuit to do this based on an Attiny25 microcontroller. The circuit is very simple consisting of a single AVR, two resistors, two LEDs (one red and one IR), and one tactile switch. Both LEDs are driven by a single pin on the AVR configured for output. The tactile switch is connected to a pin configured as input. The power input is 5v. Not shown in the schematic (but is present in the photograph) is a 5v L78L linear voltage regulator and a couple of ceramic caps. This allows me to power from sources up to 30v though I usually use a 12v UPS battery. Current draw is only 12mA so I don’t care to use a switching mode buck converter.  
   
